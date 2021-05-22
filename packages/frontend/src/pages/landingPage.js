@@ -1,4 +1,11 @@
 import droneOperators from "./img/droneOperators.png";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  Redirect,
+} from "react-router-dom";
 
 function LandingPage() {
   return (
@@ -7,15 +14,16 @@ function LandingPage() {
         href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
         rel="stylesheet"
       />
-      <div className="pt-10 pl-10 pr-10">
+
+      <div className="pt-10 pl-10 pr-10 max-w-7xl">
         <div className="bg-gradient-to-r from-red-100 to-blue-200 rounded-xl p-5 text-center">
           <div className="grid grid-col-2 grid-flow-col">
             <div className="text-5xl col-span-9 m-7">Dronowa giełda zleceń</div>
-            <button className="ordersList bg-red-300 rounded-xl p-5 m-5 col-span-1">
-              lista zleceń
+            <button className="ordersList bg-red-300 rounded-xl p-5 m-5 col-span-1 font-semibold">
+              <Link to="/ordersList">Lista Zleceń</Link>
             </button>
-            <button className="login bg-green-500 rounded-xl p-5 m-5 col-span-1">
-              zaloguj sie
+            <button className="login bg-green-500 rounded-xl p-5 m-5 col-span-1 font-semibold">
+              <Link to="/login">Zaloguj</Link>
             </button>
           </div>
         </div>
