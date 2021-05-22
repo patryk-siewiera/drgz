@@ -1,4 +1,4 @@
-import droneOperators from "./img/droneOperators.png"
+import droneOperators from "./img/droneOperators.png";
 
 function LandingPage() {
   return (
@@ -6,13 +6,20 @@ function LandingPage() {
       <link
         href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
         rel="stylesheet"
-      ></link>
+      />
       <div className="pt-10 pl-10 pr-10">
-        <div className="bg-gradient-to-r from-red-100 to-blue-200 rounded-xl p-8 md:p-20 text-center">
-          <p className="text-5xl">
-          Dronowa giełda zleceń
-          </p>
+        <div className="bg-gradient-to-r from-red-100 to-blue-200 rounded-xl p-5 text-center">
+          <div className="grid grid-col-2 grid-flow-col">
+            <div className="text-5xl col-span-9 m-7">Dronowa giełda zleceń</div>
+            <button className="ordersList bg-red-300 rounded-xl p-5 m-5 col-span-1">
+              lista zleceń
+            </button>
+            <button className="login bg-green-500 rounded-xl p-5 m-5 col-span-1">
+              zaloguj sie
+            </button>
+          </div>
         </div>
+
         <div className="grid gap-x-8 gap-y-4 grid-cols-3 md:pt-10 text-center">
           <div className="bg-blue-100 rounded-xl p-5">
             Współpracujemy tylko z najlepszymi
