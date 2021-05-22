@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import Login from "./pages/login";
 import NoMatch from "./pages/noMatch";
 import OrdersList from "./pages/ordersList";
+import AddOrder from "./pages/addOrder";
 
 import {
   BrowserRouter as Router,
@@ -24,6 +25,9 @@ ReactDOM.render(
         </Route>
         <Route exact path="/ordersList">
           <OrdersList />
+        </Route>
+        <Route exact path="/addOrder">
+          <AddOrder />
         </Route>
         <Route exact path="/">
           <LandingPage />
