@@ -6,6 +6,7 @@ import {
   Link,
   Redirect,
 } from "react-router-dom";
+import CardOrder from "./cardOrders";
 
 function OrdersList() {
   return (
@@ -15,24 +16,37 @@ function OrdersList() {
         rel="stylesheet"
       />
 
-      <div className=" p-20">
-        <div className="text-4xl">Lista zleceń </div>
+      <div className="items-center p-20 m-auto mw-w-md max-w-7xl">
+        <div className="grid grid-cols-4 gap-4">
+          <div className="mt-2 text-4xl">Lista zleceń </div>
 
-        <Link to="/addOrder">
-          <button className="bg-green-100 rounded-xl font-semibold p-5 text-center">
-            + Dodaj zlecenie
-          </button>
-        </Link>
+          <Link to="/addOrder">
+            <button className="p-5 font-semibold text-center bg-green-100 col-span rounded-xl hover:bg-green-200">
+              + Dodaj zlecenie
+            </button>
+          </Link>
 
+          <Link to="/landingPage">
+            <button className="p-5 font-semibold text-center bg-blue-100 fo0t-semibold right-1 rounded-xl hover:bg-blue-200">
+              Powrót
+            </button>
+          </Link>
+        </div>
         <br />
         <br />
         <br />
+        <div className="grid grid-cols-4 gap-4">
+          <CardOrder />
+          <CardOrder />
+          <CardOrder />
+          <CardOrder />
+          <CardOrder />
+          <CardOrder />
+          <CardOrder />
+          <CardOrder />
+          <CardOrder />
+        </div>
         <br />
-        <Link to="/landingPage">
-          <button className="bg-blue-100 rounded-xl font-semibold p-5 text-center">
-            Powrót
-          </button>
-        </Link>
       </div>
     </div>
   );

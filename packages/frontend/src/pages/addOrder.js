@@ -25,7 +25,7 @@ function AddOrder() {
         <br />
         <br />
         <Link to="/ordersList">
-          <button className="bg-blue-100 rounded-xl font-semibold p-5 text-center">
+          <button className="p-5 font-semibold text-center bg-blue-100 rounded-xl hover:bg-blue-200">
             Powrót do listy zleceń
           </button>
         </Link>

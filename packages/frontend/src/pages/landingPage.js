@@ -9,38 +9,44 @@ import {
 
 function LandingPage() {
   return (
-    <div className="app font-thin text-2xl">
+    <div className="text-2xl font-thin app">
       <link
         href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
         rel="stylesheet"
       />
 
-      <div className="pt-10 pl-10 pr-10 max-w-7xl">
-        <div className="bg-gradient-to-r from-red-100 to-blue-200 rounded-xl p-5 text-center">
-          <div className="grid grid-col-2 grid-flow-col">
-            <div className="text-5xl col-span-9 m-7">Dronowa giełda zleceń</div>
-            <button className="ordersList bg-red-300 rounded-xl p-5 m-5 col-span-1 font-semibold">
-              <Link to="/ordersList">Lista Zleceń</Link>
-            </button>
-            <button className="login bg-green-500 rounded-xl p-5 m-5 col-span-1 font-semibold">
-              <Link to="/login">Zaloguj</Link>
-            </button>
+      <div className="pt-10 pl-10 pr-10 m-auto mw-w-md max-w-7xl ">
+        <div className="p-5 text-center bg-gradient-to-r from-red-100 to-blue-200 rounded-xl ">
+          <div className="grid grid-flow-col grid-col-2">
+            <div className="col-span-9 text-5xl m-7">Dronowa giełda zleceń</div>
+
+            <Link to="/ordersList">
+              <button className="col-span-1 p-5 m-5 font-semibold bg-red-300 ordersList rounded-xl hover:bg-red-400">
+                Lista Zleceń
+              </button>
+            </Link>
+
+            <Link to="/login">
+              <button className="col-span-1 p-5 m-5 font-semibold bg-green-400 login rounded-xl hover:bg-green-500">
+                Zaloguj
+              </button>
+            </Link>
           </div>
         </div>
 
-        <div className="grid gap-x-8 gap-y-4 grid-cols-3 md:pt-10 text-center">
-          <div className="bg-blue-100 rounded-xl p-5">
+        <div className="grid grid-cols-3 text-center gap-x-8 gap-y-4 md:pt-10">
+          <div className="p-5 bg-blue-100 rounded-xl">
             Współpracujemy tylko z najlepszymi
           </div>
-          <div className="bg-blue-200 rounded-xl p-5">
+          <div className="p-5 bg-blue-200 rounded-xl">
             Używamy tylko najlepszego sprzętu
           </div>
-          <div className="bg-blue-300 rounded-xl p-5">
+          <div className="p-5 bg-blue-300 rounded-xl">
             Doświadczenie i renoma
           </div>
         </div>
 
-        <div className="grid gap-x-8 gap-y-4 grid-cols-1 md:p-10">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:p-10">
           <div className="bg-green-100 rounded-md p-7 ">1. Zarejestruj się</div>
           <div className="bg-green-200 rounded-md p-7">
             2. Dodaj zlecenie (inspekcja, raport UDT)
@@ -50,8 +56,8 @@ function LandingPage() {
           </div>
         </div>
       </div>
-      <div className="rounded-md pl-40">
-        <img src={droneOperators} />
+      <div className="max-w-2xl m-auto ">
+        <img src={droneOperators} alt="droneOperators" />
       </div>
     </div>
   );
