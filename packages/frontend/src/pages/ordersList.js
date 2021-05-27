@@ -28,7 +28,7 @@ function OrdersList() {
 
           <Link to="/landingPage">
             <button className="p-5 font-semibold text-center bg-blue-100 fo0t-semibold right-1 rounded-xl hover:bg-blue-200">
-              Powrót
+              Dronowa Giełda Zleceń
             </button>
           </Link>
         </div>

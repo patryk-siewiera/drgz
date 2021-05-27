@@ -15,7 +15,7 @@ function CardOrder() {
           href="#"
           class="bg-green-500 hover:bg-green-400 text-white px-4 py-2 inline-block mt-4 rounded"
         >
-          Read more
+          Więcej detali
         </button>
       </div>
     </div>
