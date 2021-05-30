@@ -11,10 +11,7 @@ import {
 function Login() {
   return (
     <div>
-      <link
-        href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-        rel="stylesheet"
-      />
+
       <div className="p-20">
         <div className="text-4xl">
           {" "}

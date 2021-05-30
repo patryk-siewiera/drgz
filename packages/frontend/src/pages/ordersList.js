@@ -11,10 +11,7 @@ import CardOrder from "./cardOrders";
 function OrdersList() {
   return (
     <div>
-      <link
-        href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-        rel="stylesheet"
-      />
+
 
       <div className="items-center p-20 m-auto mw-w-md max-w-7xl">
         <div className="grid grid-cols-4 gap-4">

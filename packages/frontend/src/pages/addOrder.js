@@ -1,5 +1,5 @@
 import React from "react";
-import { PrismaClient } from "@prisma/client";
+
 import {
   BrowserRouter as Router,
   Route,
@@ -21,14 +21,9 @@ function AddOrder() {
     alert(JSON.stringify(data, null, 1));
   };
 
-  const prisma = new PrismaClient();
-
   return (
     <div>
-      <link
-        href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-        rel="stylesheet"
-      />
+
 
       <div className="items-center p-20 m-auto mw-w-md max-w-7xl">
         <div className="text-4xl">Dodaj zlecenie</div>

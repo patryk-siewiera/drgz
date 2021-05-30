@@ -10,10 +10,7 @@ import {
 function LandingPage() {
   return (
     <div className="text-2xl font-thin app">
-      <link
-        href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-        rel="stylesheet"
-      />
+
 
       <div className="pt-10 pl-10 pr-10 m-auto mw-w-md max-w-7xl ">
         <div className="p-5 text-center bg-gradient-to-r from-red-100 to-blue-200 rounded-xl ">

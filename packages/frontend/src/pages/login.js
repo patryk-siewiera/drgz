@@ -11,10 +11,7 @@ const Login = () => {
   };
   return (
     <div className="flex h-screen bg-gray-bg1">
-      <link
-        href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-        rel="stylesheet"
-      />
+
       <div className="w-full max-w-md px-16 py-10 mx-auto d-lg mb-30 order mbg-white border-primaryBorder shadow-default">
         <h1 className="mt-40 mb-12 text-3xl font-medium text-center text-primary">
           Log in to your account
