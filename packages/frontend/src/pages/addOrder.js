@@ -1,4 +1,5 @@
 import React from "react";
+import { PrismaClient } from "@prisma/client";
 import {
   BrowserRouter as Router,
   Route,
@@ -19,6 +20,8 @@ function AddOrder() {
   const onSubmit = (data) => {
     alert(JSON.stringify(data, null, 1));
   };
+
+  const prisma = new PrismaClient();
 
   return (
     <div>
