@@ -35,6 +35,7 @@ function AddOrder() {
           <label>
             Typ Zlecenia
             <select
+              {...register("type", { required: true })}
               class="block appearance-none w-full bg-gray-100 border border-gray-200 text-gray-700 py-3 px-4 pr-10 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-state"
             >
@@ -82,6 +83,7 @@ function AddOrder() {
               placeholder="Warszawa"
             />
           </label>
+
           <label className="py-30">
             {" "}
             Ulica
@@ -90,6 +92,16 @@ function AddOrder() {
               class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               type="text"
               placeholder="Al. Jerozolimskie"
+            />
+          </label>
+          <label className="py-30">
+            {" "}
+            Opis
+            <input
+              {...register("description", { required: true })}
+              class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              type="text"
+              placeholder="Opis zlecenia"
             />
           </label>
           <label>
