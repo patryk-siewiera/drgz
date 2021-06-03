@@ -16,7 +16,14 @@ import {
   Redirect,
 } from "react-router-dom";
 
+// here state storing 
+
+
+// move here route function
+
 ReactDOM.render(
+  // const [adsList, setAdsList] = useState([]) -> to jest zle 
+
   <React.StrictMode>
     <Router>
       <Switch>
