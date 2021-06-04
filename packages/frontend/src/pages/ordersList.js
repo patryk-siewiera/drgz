@@ -12,9 +12,11 @@ import { createContext, useState, Component } from "react";
 
 function OrdersList() {
   const [drafts, setDrafts] = useState([]);
+  const [count, setCount] = useState(1);
 
   function createNewEntry() {
-    setDrafts([...drafts, <CardOrder />]);
+    setDrafts([...drafts, <CardOrder id={count} />]);
+    setCount(count + 1);
   }
 
   return (
@@ -51,11 +53,7 @@ function OrdersList() {
         <br />
         <br />
 
-        <div className="grid grid-cols-4 gap-4">
-          <CardOrder />
-          <CardOrder />
-          {drafts}
-        </div>
+        <div className="grid grid-cols-4 gap-4">{drafts}</div>
         <br />
       </div>
     </div>
