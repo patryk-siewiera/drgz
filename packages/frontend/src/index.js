@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import LandingPage from "./pages/landingPage";
-import reportWebVitals from "./reportWebVitals";
-import Login from "./pages/login";
-import NoMatch from "./pages/noMatch";
-import OrdersList from "./pages/ordersList";
-import AddOrder from "./pages/addOrder";
+import LandingPage from "./pages/LandingPage";
+import Login from "./pages/Login";
+import NoMatch from "./pages/NoMatch";
+import OrdersList from "./pages/OrdersList";
+import AddOrder from "./pages/AddOrder";
+import TestContextFunction from "./pages/TestContext";
 
 import {
   BrowserRouter as Router,
@@ -16,13 +16,12 @@ import {
   Redirect,
 } from "react-router-dom";
 
-// here state storing 
-
+// here state storing
 
 // move here route function
 
 ReactDOM.render(
-  // const [adsList, setAdsList] = useState([]) -> to jest zle 
+  // const [adsList, setAdsList] = useState([]) -> to jest zle
 
   <React.StrictMode>
     <Router>
@@ -42,6 +41,9 @@ ReactDOM.render(
         <Route exact path="/landingPage">
           <LandingPage />
         </Route>
+        <Route exact path="/testContext">
+          <TestContextFunction />
+        </Route>
         <Route exact path="*">
           <NoMatch />
         </Route>
@@ -50,8 +52,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
