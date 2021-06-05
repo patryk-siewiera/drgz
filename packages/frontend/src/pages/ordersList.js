@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { render } from "react-dom";
 import {
   BrowserRouter as Router,
@@ -7,17 +7,26 @@ import {
   Link,
   Redirect,
 } from "react-router-dom";
-import CardOrder from "./components/CardOrders";
+import CardOrder from "./components/CardOrdersExamples";
 import { createContext, useState, Component } from "react";
+import apiInstance from "../api";
 
 function OrdersList() {
   const [drafts, setDrafts] = useState([]);
+  const [orders, setOrders] = useState([]);
   const [count, setCount] = useState(1);
 
   function createNewEntry() {
     setDrafts([...drafts, <CardOrder id={count} />]);
     setCount(count + 1);
   }
+
+  useEffect(() => {
+    (async () => {
+      const orders = await apiInstance.getOrders();
+      setOrders(orders);
+    })();
+  }, []);
 
   return (
     <div>
