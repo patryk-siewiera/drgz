@@ -38,23 +38,16 @@ function OrdersList() {
           </Link>
         </div>
 
-        <br />
-        <br />
+        <div className="pt-10">
+          <button
+            onClick={createNewEntry}
+            className="p-5 font-semibold text-center bg-red-100 right-1 rounded-xl hover:bg-blue-200"
+          >
+            quickly add a new component
+          </button>
+        </div>
 
-        <button
-          onClick={createNewEntry}
-          className="p-5 font-semibold text-center bg-red-100 right-1 rounded-xl hover:bg-blue-200"
-        >
-          quickly add a new component
-        </button>
-
-        <br />
-        <br />
-        <br />
-        <br />
-
-        <div className="grid grid-cols-4 gap-4">{drafts}</div>
-        <br />
+        <div className="grid grid-cols-4 gap-4 pt-10">{drafts}</div>
       </div>
     </div>
   );

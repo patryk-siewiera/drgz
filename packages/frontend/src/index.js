@@ -6,7 +6,6 @@ import Login from "./pages/Login";
 import NoMatch from "./pages/NoMatch";
 import OrdersList from "./pages/OrdersList";
 import AddOrder from "./pages/AddOrder";
-import TestContextFunction from "./pages/TestContext";
 
 import {
   BrowserRouter as Router,
@@ -40,9 +39,6 @@ ReactDOM.render(
         </Route>
         <Route exact path="/landingPage">
           <LandingPage />
-        </Route>
-        <Route exact path="/testContext">
-          <TestContextFunction />
         </Route>
         <Route exact path="*">
           <NoMatch />
