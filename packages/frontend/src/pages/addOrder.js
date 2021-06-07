@@ -137,7 +137,6 @@ function AddOrder() {
         </div>
       </div>
       {JSON.stringify(saveData, null, 1)}
-      <CardOrder id="1" />
     </div>
   );
 }
