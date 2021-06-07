@@ -17,7 +17,7 @@ model orders {
   voivodeship      String?   @db.VarChar
   city             String?   @db.VarChar
   street           String?   @db.VarChar
-  cost             Int?
+  cost             String?
   cost_negotiation Boolean?
   description      String?   @db.VarChar
   User             User?     @relation(fields: [userId], references: [id])

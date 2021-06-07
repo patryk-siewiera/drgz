@@ -16,18 +16,19 @@ app.use((req, res, next) => {
 
 app.get("/order", async (req, res) => {
   const orders = await prisma.orders.findMany();
-  // console.info("orders", orders);
-  console.log("\n----- GET -----");
+  let date = new Date();
+  console.log("\n----- GET -----  ", date.toISOString());
   console.info("200 OK: GET: /order");
   res.send(orders);
 });
 
 app.post("/order", express.json(), async (req, res) => {
-  console.log("\n----- POST ----- ID:", req.body.id);
+  let date = new Date();
+  console.log("\n----- POST -----", date.toISOString());
   console.log(req.body);
   const order = req.body;
   await prisma.orders.create({ data: order });
-  res.send("Succesfully added entry");
+  res.send("Succesfully added entry\n");
 });
 
 app.listen(port, () =>

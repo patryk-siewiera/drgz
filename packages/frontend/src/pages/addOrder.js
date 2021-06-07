@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { render } from "react-dom";
 import CardOrder from "./components/CardOrders";
+import apiInstance from "../api";
 
 import {
   BrowserRouter as Router,
@@ -23,6 +24,7 @@ function AddOrder() {
 
   function onSubmit(data) {
     setSaveData(data);
+    apiInstance.createOrder(data);
   }
 
   return (
@@ -115,7 +117,7 @@ function AddOrder() {
               />
             </label>
             <label>
-              <input type="checkbox" {...register("costNegotiation")} />
+              <input type="checkbox" {...register("cost_negotiation")} />
               Do negocjacji
             </label>
 
@@ -136,7 +138,6 @@ function AddOrder() {
           </Link>
         </div>
       </div>
-      {JSON.stringify(saveData, null, 1)}
     </div>
   );
 }
