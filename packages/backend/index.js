@@ -23,11 +23,11 @@ app.get("/order", async (req, res) => {
 });
 
 app.post("/order", express.json(), async (req, res) => {
-  console.log("\n----- POST -----");
+  console.log("\n----- POST ----- ID:", req.body.id);
   console.log(req.body);
   const order = req.body;
   await prisma.orders.create({ data: order });
-  res.send("ok");
+  res.send("Succesfully added entry");
 });
 
 app.listen(port, () =>
