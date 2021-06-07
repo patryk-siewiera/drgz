@@ -56,11 +56,12 @@ function OrdersList() {
           </button>
         </div>
 
-        <div className="grid grid-cols-4 gap-4 pt-10">{drafts}</div>
+        <div className="grid grid-cols-4 gap-4 pt-10">
+          {orders.map((order) => (
+            <CardOrder {...order} />
+          ))}
+        </div>
         {/* <pre>{JSON.stringify(orders, null, 2)}</pre> */}
-        {orders.map((order) => (
-          <CardOrder {...order} />
-        ))}
       </div>
     </div>
   );
