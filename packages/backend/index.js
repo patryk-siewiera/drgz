@@ -1,5 +1,4 @@
 const PrismaClient = require("@prisma/client").PrismaClient;
-const bodyParser = require("body-parser");
 
 const express = require("express");
 const app = express();
@@ -24,12 +23,9 @@ app.get("/order", async (req, res) => {
 });
 
 app.post("/order", express.json(), async (req, res) => {
-  // console.log(app.use(bodyParser.json(req)));
-  // res.send("test5");
   console.log("\n----- POST -----");
   console.log(req.body);
   const order = req.body;
-  // console.info("order", order);
   await prisma.orders.create({ data: order });
   res.send("ok");
 });

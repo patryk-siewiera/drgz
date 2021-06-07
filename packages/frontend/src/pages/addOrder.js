@@ -28,7 +28,7 @@ function AddOrder() {
   return (
     <div>
       <div className="items-center p-20 m-auto mw-w-md max-w-7xl">
-        <div className="text-4xl">Dodaj zlecenie</div>
+        <div className="text-5xl">Dodaj zlecenie</div>
 
         <div className="pt-10">
           <form class="w-full max-w-lg" onSubmit={handleSubmit(onSubmit)}>

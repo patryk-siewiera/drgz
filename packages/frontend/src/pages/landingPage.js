@@ -12,17 +12,17 @@ function LandingPage() {
     <div className="text-2xl font-thin app">
       <div className="pt-10 pl-10 pr-10 m-auto mw-w-md max-w-7xl ">
         <div className="p-5 text-center bg-gradient-to-r from-red-100 to-blue-200 rounded-xl ">
-          <div className="grid grid-flow-col grid-col-2">
+          <div className="grid grid-flow-col gap-10 mx-4 grid-col-2">
             <div className="col-span-9 text-5xl m-7">Dronowa giełda zleceń</div>
 
             <Link to="/ordersList">
-              <button className="col-span-1 p-5 m-5 font-semibold bg-red-300 ordersList rounded-xl hover:bg-red-400">
+              <button className="w-full p-5 m-5 font-semibold bg-red-300 ordersList rounded-xl hover:bg-red-400">
                 Lista Zleceń
               </button>
             </Link>
 
             <Link to="/login">
-              <button className="col-span-1 p-5 m-5 font-semibold bg-green-400 login rounded-xl hover:bg-green-500">
+              <button className="w-full p-5 m-5 font-semibold bg-green-400 login rounded-xl hover:bg-green-500">
                 Zaloguj
               </button>
             </Link>

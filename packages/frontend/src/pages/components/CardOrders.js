@@ -12,13 +12,23 @@ function CardOrder(props) {
       <p>ulica: {props.street}</p>
       <p>opis: {props.description}</p>
       <p>cena: {props.cost}</p>
-      <div className="relative bottom-0 inline-block align-bottom">
-        <button
-          href="#"
-          class="bg-green-500 hover:bg-green-400 text-white px-4 py-2 inline-block mt-4 rounded"
-        >
-          Więcej detali
-        </button>
+      <div className="grid grid-cols-2">
+        <div className="">
+          <button
+            href="#"
+            class="h-16 w-30 px-6 m-2 bg-green-200 rounded-lg focus:shadow-outline hover:bg-green-500"
+          >
+            Więcej detali
+          </button>
+        </div>
+        <div className="">
+          <button
+            href="#"
+            class="h-16 w-30 px-6 m-2 bg-red-300 rounded-lg focus:shadow-outline hover:bg-red-500"
+          >
+            Usuń
+          </button>
+        </div>
       </div>
     </div>
   );
