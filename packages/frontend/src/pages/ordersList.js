@@ -12,14 +12,7 @@ import { createContext, useState, Component } from "react";
 import apiInstance from "../api";
 
 function OrdersList() {
-  const [drafts, setDrafts] = useState([]);
   const [orders, setOrders] = useState([]);
-  const [count, setCount] = useState(1);
-
-  function createNewEntry() {
-    setDrafts([...drafts, <CardOrder id={count} />]);
-    setCount(count + 1);
-  }
 
   useEffect(() => {
     (async () => {
@@ -47,21 +40,12 @@ function OrdersList() {
           </Link>
         </div>
 
-        <div className="pt-10">
-          <button
-            onClick={createNewEntry}
-            className="p-5 font-semibold text-center bg-red-100 right-1 rounded-xl hover:bg-blue-200"
-          >
-            quickly add a new component
-          </button>
-        </div>
-
         <div className="grid grid-cols-4 gap-4 pt-10">
           {orders.map((order) => (
             <CardOrder {...order} />
           ))}
         </div>
-        <pre>{JSON.stringify(orders, null, 2)}</pre>
+        <pre className="p-20">DATABASE: {JSON.stringify(orders, null, 2)}</pre>
       </div>
     </div>
   );
