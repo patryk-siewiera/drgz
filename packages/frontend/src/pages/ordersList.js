@@ -7,7 +7,7 @@ import {
   Link,
   Redirect,
 } from "react-router-dom";
-import CardOrder from "./components/CardOrdersExamples";
+import CardOrder from "./components/CardOrders";
 import { createContext, useState, Component } from "react";
 import apiInstance from "../api";
 
@@ -61,7 +61,7 @@ function OrdersList() {
             <CardOrder {...order} />
           ))}
         </div>
-        {/* <pre>{JSON.stringify(orders, null, 2)}</pre> */}
+        <pre>{JSON.stringify(orders, null, 2)}</pre>
       </div>
     </div>
   );

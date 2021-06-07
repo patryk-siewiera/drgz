@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { render } from "react-dom";
-import CardOrder from "./components/CardOrdersExamples";
+import CardOrder from "./components/CardOrders";
 
 import {
   BrowserRouter as Router,
