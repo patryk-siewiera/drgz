@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { render } from "react-dom";
-import CardOrder from "./components/CardOrders";
+import CardOrder from "./components/CardOrdersExamples";
 
 import {
   BrowserRouter as Router,
@@ -19,7 +19,7 @@ function AddOrder() {
     formState: { errors },
   } = useForm();
 
-  const [saveData, setSaveData] = useState(0);
+  const [saveData, setSaveData] = useState({});
 
   function onSubmit(data) {
     setSaveData(data);

@@ -5,6 +5,14 @@ const app = express();
 const port = 3001;
 
 const prisma = new PrismaClient();
+const frontend = "http://localhost:3000";
+
+app.use((req, res, next) => {
+  res.set("Access-Control-Allow-Headers", "*");
+  res.set("Access-Control-Allow-Methods", "*");
+  res.set("Access-Control-Allow-Origin", frontend);
+  next();
+});
 
 app.get("/order", async (req, res) => {
   const orders = await prisma.orders.findMany();

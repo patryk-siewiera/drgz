@@ -5,13 +5,13 @@ function CardOrder(props) {
   return (
     <div class="grid grid-rows-6 p-4 static w-64 h-96 border">
       <h5 class="text-sm text-gray-500 font-bold tracking-widest mb-2 uppercase">
-        {props.type}
+        {mockData[1].type}
       </h5>
-      <p>województwo: {props.voivodeship}</p>
-      <p>miasto: {props.city}</p>
-      <p>ulica: {props.street}</p>
-      <p>opis: {props.description}</p>
-      <p>cena: {props.cost}</p>
+      <p>województwo: {mockData[props.id].voivodeship}</p>
+      <p>miasto: {mockData[props.id].city}</p>
+      <p>ulica: {mockData[props.id].street}</p>
+      <p>opis: {mockData[props.id].description}</p>
+      <p>cena: {mockData[props.id].cost}</p>
       <div className="relative bottom-0 inline-block align-bottom">
         <button
           href="#"
