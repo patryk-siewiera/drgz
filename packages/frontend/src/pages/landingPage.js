@@ -29,7 +29,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div className="grid-cols-3 pt-10 text-center xl:grid gap-x-8 gap-y-4 md:p-10">
+        <div className="pt-10 text-center lg:grid-cols-3 xl:grid gap-x-8 md:gap-2 md:grid md:grid-cols-1">
           <div className="p-5 bg-blue-100 rounded-xl">
             Współpracujemy tylko z najlepszymi
           </div>

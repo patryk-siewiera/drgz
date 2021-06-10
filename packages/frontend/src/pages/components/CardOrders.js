@@ -3,7 +3,7 @@ import mockData from "../MockData";
 import apiInstance from "../../api";
 
 async function deleteOrder(id, callback) {
-  console.log("id of deleted item", id);
+  alert("Removed order");
   await apiInstance.removeOrder(id);
   if (callback !== undefined) {
     // like .then
