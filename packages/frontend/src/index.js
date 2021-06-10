@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import NoMatch from "./pages/NoMatch";
 import OrdersList from "./pages/OrdersList";
 import AddOrder from "./pages/AddOrder";
+import SuccessfullyAdded from "./pages/SuccessfullyAdded";
 
 import {
   BrowserRouter as Router,
@@ -25,20 +26,23 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route path="/login">
+        <Route path="/Login">
           <Login />
         </Route>
-        <Route exact path="/ordersList">
+        <Route exact path="/OrdersList">
           <OrdersList />
         </Route>
-        <Route exact path="/addOrder">
+        <Route exact path="/AddOrder">
           <AddOrder />
         </Route>
         <Route exact path="/">
           <LandingPage />
         </Route>
-        <Route exact path="/landingPage">
+        <Route exact path="/LandingPage">
           <LandingPage />
+        </Route>
+        <Route exact path="/SuccessfullyAdded">
+          <SuccessfullyAdded />
         </Route>
         <Route exact path="*">
           <NoMatch />

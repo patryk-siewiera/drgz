@@ -3,6 +3,9 @@ import { useForm } from "react-hook-form";
 import { render } from "react-dom";
 import CardOrder from "./components/CardOrders";
 import apiInstance from "../api";
+import LandingPage from "./LandingPage.js";
+import { useHistory } from "react-router-dom";
+import SuccessfullyAdded from "./SuccessfullyAdded";
 
 import {
   BrowserRouter as Router,
@@ -20,11 +23,16 @@ function AddOrder() {
     formState: { errors },
   } = useForm();
 
+  const history = useHistory();
+
   const [saveData, setSaveData] = useState({});
 
   function onSubmit(data) {
     setSaveData(data);
     apiInstance.createOrder(data);
+    const successRoute = "/SuccessfullyAdded";
+    history.push(successRoute);
+    // alert("this is alert ");
   }
 
   return (
@@ -76,7 +84,6 @@ function AddOrder() {
               </div>
             </label>
             <label className="py-30">
-              {" "}
               Miasto
               <input
                 {...register("city", { required: true })}
@@ -122,9 +129,9 @@ function AddOrder() {
             </label>
 
             <div className="pt-10">
-              <div className="p-5 font-semibold text-center bg-green-100 rounded-xl hover:bg-green-200">
-                <input type="submit" />
-              </div>
+              <button className="p-5 font-semibold text-center bg-green-100 w-60 rounded-xl hover:bg-green-200">
+                <input type="submit" value="Dodaj ogłoszenie +" />
+              </button>
             </div>
             <br />
           </form>

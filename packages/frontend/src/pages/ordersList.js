@@ -45,6 +45,7 @@ function OrdersList() {
             <CardOrder {...order} />
           ))}
         </div>
+        <pre className="p-20">DATABASE: {JSON.stringify(orders, null, 2)}</pre>
       </div>
     </div>
   );
