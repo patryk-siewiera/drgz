@@ -24,11 +24,21 @@ app.get("/order", async (req, res) => {
 
 app.post("/order", express.json(), async (req, res) => {
   let date = new Date();
+  ``;
   console.log("\n----- POST -----", date.toISOString());
   console.log(req.body);
   const order = req.body;
   await prisma.orders.create({ data: order });
   res.send("Succesfully added entry\n");
+});
+
+app.delete("/order", express.json(), async (req, res) => {
+  let date = new Date();
+  console.log("\n----- DELETE -----", date.toISOString());
+  console.log("id: ", req.body.id);
+  const order = req.body; 
+  await prisma.orders.delete({ data: order });
+  res.send("Deleted");
 });
 
 app.listen(port, () =>

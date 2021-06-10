@@ -18,6 +18,12 @@ function buildClient(basePath) {
         body: JSON.stringify(data),
       }).then((r) => r.json());
     },
+    removeOrder(data) {
+      console.log("delete method ");
+      return fetch(`${basePath}/order`, {
+        method: "DELETE",
+      }).then((r) => r.json());
+    },
   };
 }
 

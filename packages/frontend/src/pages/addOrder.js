@@ -32,7 +32,6 @@ function AddOrder() {
     apiInstance.createOrder(data);
     const successRoute = "/SuccessfullyAdded";
     history.push(successRoute);
-    // alert("this is alert ");
   }
 
   return (
