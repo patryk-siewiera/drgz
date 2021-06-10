@@ -14,11 +14,13 @@ import apiInstance from "../api";
 function OrdersList() {
   const [orders, setOrders] = useState([]);
 
+  const refreshOrders = async () => {
+    const orders = await apiInstance.getOrders();
+    setOrders(orders);
+  };
+
   useEffect(() => {
-    (async () => {
-      const orders = await apiInstance.getOrders();
-      setOrders(orders);
-    })();
+    refreshOrders();
   }, []);
 
   return (
@@ -42,10 +44,9 @@ function OrdersList() {
 
         <div className="grid-cols-4 gap-4 pt-10 xl:grid">
           {orders.map((order) => (
-            <CardOrder {...order} />
+            <CardOrder deleteCallback={refreshOrders} {...order} />
           ))}
         </div>
-        <pre className="p-20">DATABASE: {JSON.stringify(orders, null, 2)}</pre>
       </div>
     </div>
   );

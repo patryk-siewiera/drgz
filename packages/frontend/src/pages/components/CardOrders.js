@@ -2,12 +2,16 @@ import React from "react";
 import mockData from "../MockData";
 import apiInstance from "../../api";
 
-function deleteOrder(id) {
+async function deleteOrder(id, callback) {
   console.log("id of deleted item", id);
-  apiInstance.removeOrder();
+  await apiInstance.removeOrder(id);
+  if (callback !== undefined) {
+    // like .then
+    callback();
+  }
 }
 
-function CardOrder(props) {
+function CardOrder({ deleteCallback = undefined, ...props }) {
   return (
     <div class="grid grid-rows-6 p-4 static w-64 h-96 border">
       <h5 class="text-sm text-gray-500 font-bold tracking-widest mb-2 uppercase">
@@ -30,9 +34,9 @@ function CardOrder(props) {
         </div>
         <div className="">
           <button
-            onClick={() => deleteOrder(props.id)}
+            onClick={() => deleteOrder(props.id, deleteCallback)}
             href="#"
-            class="h-16 w-30 px-6 m-2 bg-red-300 rounded-lg focus:shadow-outline hover:bg-red-500"
+            className="h-16 px-6 m-2 bg-red-300 rounded-lg w-30 focus:shadow-outline hover:bg-red-500"
           >
             Usuń
           </button>

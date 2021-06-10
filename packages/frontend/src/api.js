@@ -18,9 +18,9 @@ function buildClient(basePath) {
         body: JSON.stringify(data),
       }).then((r) => r.json());
     },
-    removeOrder(data) {
+    removeOrder(id) {
       console.log("delete method ");
-      return fetch(`${basePath}/order`, {
+      return fetch(`${basePath}/order/${id}`, {
         method: "DELETE",
       }).then((r) => r.json());
     },
