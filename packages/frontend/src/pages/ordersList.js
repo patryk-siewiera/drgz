@@ -24,7 +24,7 @@ function OrdersList() {
   return (
     <div>
       <div className="items-center p-20 m-auto mw-w-md max-w-7xl">
-        <div className="grid grid-cols-4 gap-10">
+        <div className="grid-cols-4 gap-10 xl:grid">
           <div className="mt-2 text-5xl">Lista zleceń </div>
 
           <Link to="/addOrder">
@@ -40,7 +40,7 @@ function OrdersList() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-4 gap-4 pt-10">
+        <div className="grid-cols-4 gap-4 pt-10 xl:grid">
           {orders.map((order) => (
             <CardOrder {...order} />
           ))}

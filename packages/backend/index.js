@@ -32,12 +32,22 @@ app.post("/order", express.json(), async (req, res) => {
   res.send("Succesfully added entry\n");
 });
 
-app.delete("/order", express.json(), async (req, res) => {
+app.delete("/order/:id", express.json(), async (req, res) => {
+  /**
+   * dlete is different to a PUT/POST request in such a way that it should not have body content
+   * thats why we should pass id in thje req.params. e.g. id
+   */
   let date = new Date();
   console.log("\n----- DELETE -----", date.toISOString());
   console.log("id: ", req.body.id);
-  const order = req.body; 
-  await prisma.orders.delete({ data: order });
+  const order = req.body;
+  console.log("poarams", req.params.id);
+  await prisma.orders.delete({
+    where: {
+      // id: req.body.id,
+      id: parseInt(req.params.id),
+    },
+  });
   res.send("Deleted");
 });
 
