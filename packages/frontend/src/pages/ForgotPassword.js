@@ -18,7 +18,9 @@ const ForgotPassword = () => {
   };
   return (
     <div className="max-w-sm pt-24 m-auto">
-      <div className="text-3xl text-center">Zapomniałeś hasła?</div>
+      <div className="p-10 text-3xl font-normal text-center bg-indigo-100 shadow-xl login">
+        Zapomniałeś hasła?
+      </div>
       <div className="max-w-xs pt-8 m-auto text-sm text-center">
         Podaj swój adres e-mail na który wyślemy link umożliwiający utworzenie
         nowego hasła.
@@ -43,7 +45,7 @@ const ForgotPassword = () => {
           <div className="flex flex-col items-center justify-center pt-12 text-black gap-y-10">
             <Link to="/ForgotPassword">
               {" "}
-              <button className="p-5 font-normal bg-red-100 rounded-md w-72 login hover:bg-red-300 hover:underline">
+              <button className="p-5 font-normal bg-red-100 rounded-md shadow-md w-72 login hover:bg-red-300 hover:underline">
                 Zmień
               </button>
             </Link>
