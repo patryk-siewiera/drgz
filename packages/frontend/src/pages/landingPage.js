@@ -14,12 +14,12 @@ function LandingPage() {
         <div className="mt-10 mb-5 text-6xl ">Dronowa Giełda Zleceń</div>
         <div className="flex flex-col mb-5 sm:block sm:space-x-5">
           <Link to="/ordersList">
-            <button className="p-5 mt-5 font-semibold bg-red-300 rounded-md w-52 ordersList hover:bg-red-400 hover:underline">
+            <button className="p-5 mt-5 font-semibold rounded-md shadow-2xl bg-gradient-to-r from-red-300 to-red-500 w-72 ordersList hover:bg-gradient-to-r hover:from-yellow-400 hover:underline">
               Lista Zleceń
             </button>
           </Link>
           <Link to="/Login">
-            <button className="p-5 mt-5 font-semibold bg-green-400 rounded-md w-52 login hover:bg-green-500 hover:underline">
+            <button className="p-5 mt-5 font-semibold bg-green-400 rounded-md shadow-md w-52 login hover:bg-green-500 hover:underline">
               Zaloguj
             </button>
           </Link>
@@ -54,7 +54,7 @@ function LandingPage() {
       </div>
       <div className="block text-center">
         <Link to="/Contact">
-          <button className="p-5 mb-5 font-semibold bg-gray-200 rounded-md w-72 login hover:bg-gray-400 hover:underline">
+          <button className="p-5 mb-5 font-semibold bg-gray-200 rounded-md shadow-xl w-72 login hover:bg-gray-400 hover:underline">
             Kontakt
           </button>
         </Link>

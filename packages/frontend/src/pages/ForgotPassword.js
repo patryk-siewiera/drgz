@@ -18,7 +18,7 @@ const ForgotPassword = () => {
   };
   return (
     <div className="max-w-sm pt-24 m-auto">
-      <div className="p-10 text-3xl font-normal text-center bg-indigo-100 shadow-xl login">
+      <div className="p-10 text-3xl font-bold text-center rounded-md shadow-xl bg-gradient-to-r from-red-200 to-blue-300 login">
         Zapomniałeś hasła?
       </div>
       <div className="max-w-xs pt-8 m-auto text-sm text-center">

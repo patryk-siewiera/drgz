@@ -21,11 +21,11 @@ const Register = () => {
       <div className="flex items-center justify-center mt-6 text-2xl text-black gap-x-2">
         {" "}
         <Link to="/Login">
-          <button className="w-40 p-5 font-normal bg-indigo-50 login hover:underline hover:bg-indigo-200">
+          <button className="w-40 p-5 text-xl font-normal bg-indigo-50 login hover:underline hover:bg-indigo-200">
             Zaloguj się
           </button>
         </Link>
-        <div className="w-3/4 p-5 text-3xl font-bold text-center bg-indigo-100 shadow-xl login">
+        <div className="w-3/4 p-5 pt-10 pb-10 text-3xl font-bold text-center rounded-md shadow-xl bg-gradient-to-r to-red-100 from-blue-200 login">
           Rejestracja
         </div>
       </div>
