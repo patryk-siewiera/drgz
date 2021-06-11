@@ -12,7 +12,6 @@ async function deleteOrder(id, callback) {
 }
 
 function CardOrder({ deleteCallback = undefined, ...props }) {
-  var isTrueSet = props.costNegotiation;
   return (
     <div class="flex flex-col pl-10 pr-10 pb-5 space-y-5 rounded-xl border border-gray bg-white shadow-md md:m-5 m-2 hover:shadow-2xl transition hover:duration-200">
       <div class="flex justify-center md:justify-end"></div>
@@ -37,7 +36,10 @@ function CardOrder({ deleteCallback = undefined, ...props }) {
         </div>
         <div className="mt-2 ml-10 text-2xl font-medium text-indigo-500">
           {" "}
-          {props.cost} zł --BOOL cost T/F--
+          {props.cost} zł{" "}
+          <div className="inline text-gray-500">
+            {props.cost_negotiation === true ? "(negocjacja ceny)" : ""}
+          </div>
         </div>
       </div>
     </div>
