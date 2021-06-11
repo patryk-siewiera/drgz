@@ -20,11 +20,11 @@ const Login = () => {
     <div className="max-w-sm pt-20 m-auto">
       <div className="flex items-center justify-center mt-6 text-2xl text-black gap-x-2">
         {" "}
-        <div className="w-3/4 p-5 font-bold text-center shadow-xl bg-indigo-50 login">
+        <div className="w-3/4 p-5 text-3xl font-bold text-center bg-indigo-100 shadow-xl login">
           Zaloguj się
         </div>
         <Link to="/Register">
-          <button className="w-40 p-5 font-normal bg-indigo-50 login hover:underline hover:bg-indigo-100">
+          <button className="w-40 p-5 font-normal bg-indigo-50 login hover:underline hover:bg-indigo-200">
             Rejestracja
           </button>
         </Link>
@@ -57,13 +57,16 @@ const Login = () => {
             />
           </div>
 
-          <div className="flex flex-col items-center justify-center text-black gap-y-32">
+          <div className="flex flex-col items-center justify-center text-black gap-y-20">
             <button className="p-5 font-semibold bg-green-300 rounded-md shadow-md w-72 login hover:bg-green-400 hover:underline">
               Zaloguj się
             </button>
-            <button className="p-5 font-normal rounded-md bg-red-50 w-72 login hover:bg-red-100 hover:underline">
-              Przypomnij hasło
-            </button>
+            <Link to="/ForgotPassword">
+              {" "}
+              <button className="p-5 font-normal rounded-md bg-red-50 w-72 login hover:bg-red-100 hover:underline">
+                Przypomnij hasło
+              </button>
+            </Link>
           </div>
         </form>
       </div>

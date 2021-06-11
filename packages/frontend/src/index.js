@@ -9,6 +9,7 @@ import AddOrder from "./pages/AddOrder";
 import SuccessfullyAdded from "./pages/SuccessfullyAdded";
 import Contact from "./pages/Contact";
 import Register from "./pages/Register";
+import ForgotPassword from "./pages/ForgotPassword";
 
 import {
   BrowserRouter as Router,
@@ -51,6 +52,9 @@ ReactDOM.render(
         </Route>
         <Route exact path="/Register">
           <Register />
+        </Route>
+        <Route exact path="/ForgotPassword">
+          <ForgotPassword />
         </Route>
         <Route exact path="*">
           <NoMatch />

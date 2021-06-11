@@ -12,7 +12,7 @@ function LandingPage() {
     <div className="pt-10 pl-10 pr-10 m-auto text-2xl app mw-w-md max-w-7xl">
       <div className="p-5 text-center shadow-2xl bg-gradient-to-r from-red-100 to-blue-200 rounded-xl">
         <div className="mt-10 mb-5 text-6xl ">Dronowa Giełda Zleceń</div>
-        <div className="block gap-4 mb-5 sm:space-x-5">
+        <div className="flex flex-col mb-5 sm:block sm:space-x-5">
           <Link to="/ordersList">
             <button className="p-5 mt-5 font-semibold bg-red-300 rounded-md w-52 ordersList hover:bg-red-400 hover:underline">
               Lista Zleceń
