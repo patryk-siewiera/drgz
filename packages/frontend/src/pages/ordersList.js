@@ -35,11 +35,6 @@ function OrdersList() {
             </button>
           </Link>
           <div></div>
-          <Link to="/landingPage">
-            <button className="w-full col-span-4 p-5 font-semibold text-center bg-blue-100 fo0t-semibold right-1 rounded-xl hover:bg-blue-200">
-              Dronowa Giełda Zleceń
-            </button>
-          </Link>
         </div>
 
         <div className="grid-cols-4 gap-4 pt-10 xl:grid xl:grid-cols-4 lg:grid lg:grid-cols-3 md:grid md:grid-cols-2 sm:grid sm:grid-cols-1 sm:justify-items-center">
@@ -47,6 +42,13 @@ function OrdersList() {
             <CardOrder deleteCallback={refreshOrders} {...order} />
           ))}
         </div>
+      </div>
+      <div className="block text-center">
+        <Link to="/landingPage">
+          <button className="p-5 mb-5 font-semibold bg-gray-200 w-72 login rounded-xl hover:bg-gray-400 hover:underline">
+            Powrót do strony głównej
+          </button>
+        </Link>
       </div>
     </div>
   );

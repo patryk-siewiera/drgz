@@ -8,6 +8,7 @@ import OrdersList from "./pages/OrdersList";
 import AddOrder from "./pages/AddOrder";
 import SuccessfullyAdded from "./pages/SuccessfullyAdded";
 import Contact from "./pages/Contact";
+import Register from "./pages/Register";
 
 import {
   BrowserRouter as Router,
@@ -47,6 +48,9 @@ ReactDOM.render(
         </Route>
         <Route exact path="/Contact">
           <Contact />
+        </Route>
+        <Route exact path="/Register">
+          <Register />
         </Route>
         <Route exact path="*">
           <NoMatch />
