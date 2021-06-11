@@ -7,6 +7,7 @@ import NoMatch from "./pages/NoMatch";
 import OrdersList from "./pages/OrdersList";
 import AddOrder from "./pages/AddOrder";
 import SuccessfullyAdded from "./pages/SuccessfullyAdded";
+import Contact from "./pages/Contact";
 
 import {
   BrowserRouter as Router,
@@ -43,6 +44,9 @@ ReactDOM.render(
         </Route>
         <Route exact path="/SuccessfullyAdded">
           <SuccessfullyAdded />
+        </Route>
+        <Route exact path="/Contact">
+          <Contact />
         </Route>
         <Route exact path="*">
           <NoMatch />

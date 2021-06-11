@@ -11,16 +11,16 @@ function LandingPage() {
   return (
     <div className="pt-10 pl-10 pr-10 m-auto text-2xl app mw-w-md max-w-7xl">
       <div className="p-5 text-center shadow-2xl bg-gradient-to-r from-red-100 to-blue-200 rounded-xl">
-        <div className="m-10 text-6xl ">Dronowa Giełda Zleceń</div>
+        <div className="mt-10 mb-5 text-6xl ">Dronowa Giełda Zleceń</div>
 
         <div className="block gap-4 mb-5 sm:space-x-5">
           <Link to="/ordersList">
-            <button className="p-5 font-semibold bg-red-300 w-52 ordersList rounded-xl hover:bg-red-400">
+            <button className="p-5 mt-5 font-semibold bg-red-300 w-52 ordersList rounded-xl hover:bg-red-400 hover:underline">
               Lista Zleceń
             </button>
           </Link>
           <Link to="/login">
-            <button className="p-5 mt-5 font-semibold bg-green-400 w-52 login rounded-xl hover:bg-green-500">
+            <button className="p-5 mt-5 font-semibold bg-green-400 w-52 login rounded-xl hover:bg-green-500 hover:underline">
               Zaloguj
             </button>
           </Link>
@@ -39,7 +39,7 @@ function LandingPage() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 pt-16 text-center gap-x-8 gap-y-4">
+      <div className="grid grid-cols-1 pt-10 text-center gap-x-8 gap-y-4">
         <div className="ml-10 mr-10 bg-green-200 rounded-md shadow-md p-7">
           Zarejestruj się
         </div>
@@ -53,9 +53,11 @@ function LandingPage() {
       <div className="block w-10/12 pt-10 pb-10 m-auto ">
         <img src={droneOperators} alt="droneOperators" />
       </div>
-      <button className="block p-5 m-auto mb-5 font-semibold bg-gray-200 w-72 login rounded-xl hover:bg-gray-400">
-        Kontakt
-      </button>
+      <Link to="/Contact">
+        <button className="block p-5 m-auto mb-5 font-semibold bg-gray-200 w-72 login rounded-xl hover:bg-gray-400 hover:underline">
+          Kontakt
+        </button>
+      </Link>
 
       <div className="mb-2 text-sm text-center">
         created by <b>BU8</b> software development
