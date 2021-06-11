@@ -6,6 +6,7 @@ import {
   Link,
   Redirect,
 } from "react-router-dom";
+import CreatedBy from "./components/CreatedBy";
 
 export default function Contact() {
   return (
@@ -39,6 +40,7 @@ export default function Contact() {
           </button>
         </Link>
       </div>
+      <CreatedBy />
     </div>
   );
 }

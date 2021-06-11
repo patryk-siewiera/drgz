@@ -25,17 +25,17 @@ function OrdersList() {
 
   return (
     <div className="p-20 m-auto mw-w-md max-w-7xl">
-      <div className="flex flex-row">
-        <div className="mt-2 mb-10 text-5xl">Lista zleceń </div>
+      <div className="flex flex-row gap-16">
+        <div className="mt-2 text-5xl">Lista zleceń </div>
         <Link to="/addOrder">
-          <button className="p-5 font-semibold text-center bg-green-100 right-px w-52 col-span rounded-xl hover:bg-green-200">
+          <button className="p-5 font-semibold text-center bg-green-100 shadow-md w-52 col-span rounded-xl hover:bg-green-200">
             + Dodaj zlecenie
           </button>
         </Link>
       </div>
 
       <div>
-        <div className="grid-cols-4 gap-4 pt-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
           {orders.map((order) => (
             <CardOrder deleteCallback={refreshOrders} {...order} />
           ))}
@@ -43,7 +43,7 @@ function OrdersList() {
       </div>
       <div className="block text-center">
         <Link to="/landingPage">
-          <button className="p-5 mb-5 font-semibold bg-gray-200 w-72 login rounded-xl hover:bg-gray-400 hover:underline">
+          <button className="p-5 mb-5 font-semibold bg-gray-200 shadow-xl w-72 login rounded-xl hover:bg-gray-400 hover:underline">
             Powrót do strony głównej
           </button>
         </Link>

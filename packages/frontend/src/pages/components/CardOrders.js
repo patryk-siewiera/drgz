@@ -13,33 +13,30 @@ async function deleteOrder(id, callback) {
 
 function CardOrder({ deleteCallback = undefined, ...props }) {
   return (
-    <div class="grid grid-rows-6 p-4 static w-64 h-96 border">
-      <h5 class="text-sm text-gray-500 font-bold tracking-widest mb-2 uppercase">
-        {props.type}
-      </h5>
-      <p>ID: {props.id}</p>
-      <p>województwo: {props.voivodeship}</p>
-      <p>miasto: {props.city}</p>
-      <p>ulica: {props.street}</p>
-      <p>opis: {props.description}</p>
-      <p>cena: {props.cost}</p>
-      <div className="grid grid-cols-2">
-        <div className="">
-          <button
-            href="#"
-            class="h-16 w-30 px-6 m-2 bg-green-200 rounded-lg focus:shadow-outline hover:bg-green-500"
-          >
-            Więcej detali
-          </button>
-        </div>
-        <div className="">
+    <div class="flex flex-col pl-10 pr-10 pt-3 pb-5 space-y-5 rounded-xl border border-gray bg-white shadow-md m-10">
+      <div class="flex justify-center md:justify-end"></div>
+      <div>
+        <h2 class="text-gray-800 text-3xl font-semibold">{props.type}</h2>
+        <div className="text-xl">{props.voivodeship}</div>
+        <div className="mt-3">ID: {props.id}</div>
+        <div className="mt-2">{props.city}</div>
+        <div>{props.street}</div>
+        <div className="mt-2 italic">{props.description}</div>
+      </div>
+      <div class="flex justify-end mt-4"></div>
+      <div className="flex flex-col-2">
+        <div>
           <button
             onClick={() => deleteOrder(props.id, deleteCallback)}
             href="#"
-            className="h-16 px-6 m-2 bg-red-300 rounded-lg w-30 focus:shadow-outline hover:bg-red-500"
+            className="h-10 px-6 m-2 bg-red-300 rounded-lg w-30 focus:shadow-outline hover:bg-red-500"
           >
             Usuń
           </button>
+        </div>
+        <div className="mt-2 ml-10 text-2xl font-medium text-indigo-500">
+          {" "}
+          {props.cost} zł
         </div>
       </div>
     </div>

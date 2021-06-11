@@ -6,6 +6,7 @@ import {
   Link,
   Redirect,
 } from "react-router-dom";
+import CreatedBy from "./components/CreatedBy";
 
 function LandingPage() {
   return (
@@ -54,15 +55,12 @@ function LandingPage() {
       </div>
       <div className="block text-center">
         <Link to="/Contact">
-          <button className="p-5 mb-5 font-semibold bg-gray-200 rounded-md shadow-xl w-72 login hover:bg-gray-400 hover:underline">
+          <button className="p-5 font-semibold bg-gray-200 rounded-md shadow-xl w-72 login hover:bg-gray-400 hover:underline">
             Kontakt
           </button>
         </Link>
       </div>
-
-      <div className="mb-2 text-sm text-center">
-        created by <b>BU8</b> software development
-      </div>
+      <CreatedBy />
     </div>
   );
 }
