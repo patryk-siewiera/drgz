@@ -21,11 +21,11 @@ const Register = () => {
       <div className="flex items-center justify-center mt-6 text-2xl text-black gap-x-2">
         {" "}
         <Link to="/Login">
-          <button className="w-40 p-5 text-xl font-normal bg-indigo-50 login hover:underline hover:bg-indigo-200">
+          <button className="p-5 text-xl font-normal absolutew-40 bg-indigo-50 login hover:underline hover:bg-indigo-200">
             Zaloguj się
           </button>
         </Link>
-        <div className="w-3/4 p-5 pt-10 pb-10 text-3xl font-bold text-center rounded-md shadow-xl bg-gradient-to-r to-red-100 from-blue-200 login">
+        <div className="w-3/4 p-5 pt-10 pb-10 text-3xl font-bold text-center rounded-md shadow-2xl bg-gradient-to-r from-purple-300 to-blue-400 login">
           Rejestracja
         </div>
       </div>
@@ -56,7 +56,7 @@ const Register = () => {
               placeholder="Hasło"
             />
           </div>
-          <div className="pt-2 pb-12">
+          <div className="pt-2 pb-20">
             <label htmlFor="password">
               <div className="pb-2 text-sm font-light">Powtórz hasło</div>
             </label>
@@ -66,18 +66,30 @@ const Register = () => {
               id="password"
               placeholder="Powtórz hasło"
             />
+            <label className="self-center gap-4 text-sm">
+              <input type="checkbox" class="form-checkbox" /> Przyjmuję do
+              wiadomości, że <b>drgz.pl</b> wykorzystuje moje dane osobowe
+              zgodnie z{" "}
+              <div className="inline underline hover:bg-blue-100">
+                Polityką prywatności
+              </div>{" "}
+              oraz{" "}
+              <div className="inline underline hover:bg-blue-100">
+                Polityką dotyczącą plików cookie i podobnych technologii.
+              </div>
+            </label>
           </div>
 
-          <div className="flex items-center justify-center text-black gap-x-2">
+          <div className="flex items-center justify-center object-center text-black gap-x-2">
             <button className="p-5 font-semibold bg-yellow-300 rounded-md shadow-md w-72 login hover:bg-yellow-400 hover:underline">
               Zarejestruj się
             </button>
           </div>
         </form>
       </div>
-      <div className="block pt-20 text-center">
+      <div className="block object-center pt-20 text-center">
         <Link to="/landingPage">
-          <button className="p-5 mb-5 font-semibold bg-gray-200 rounded-md w-72 login hover:bg-gray-400 hover:underline">
+          <button className="object-center p-5 mb-5 font-semibold bg-gray-200 rounded-md w-72 login hover:bg-gray-400 hover:underline">
             Powrót do strony głównej
           </button>
         </Link>

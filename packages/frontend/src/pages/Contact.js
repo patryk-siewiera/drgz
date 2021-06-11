@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <div className="max-w-4xl p-20 m-auto">
       {" "}
-      <div className="p-16 text-4xl font-bold text-center rounded-md shadow-xl bg-gradient-to-r from-red-200 to-indigo-500 login">
+      <div className="p-16 text-4xl font-bold text-center shadow-xl rounded-xl bg-gradient-to-r from-red-200 to-indigo-500 login">
         Połączyła nas pasja do nowych technologii oraz dronów
       </div>
       <div className="pt-16 pb-16 text-xl">
