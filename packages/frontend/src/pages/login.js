@@ -70,7 +70,7 @@ const Login = () => {
           </div>
         </form>
       </div>
-      <div className="block pt-4 text-center">
+      <div className="block pt-4 text-center ">
         <Link to="/landingPage">
           <button className="p-5 mb-5 font-semibold bg-gray-200 rounded-md w-72 login hover:bg-gray-400 hover:underline">
             Powrót do strony głównej

@@ -24,9 +24,9 @@ function OrdersList() {
   }, []);
 
   return (
-    <div className="p-20 m-auto mw-w-md max-w-7xl">
-      <div className="flex flex-row gap-16">
-        <div className="mt-2 text-5xl">Lista zleceń </div>
+    <div className="m-auto mw-w-md max-w-7xl">
+      <div className="flex flex-row pt-20 pb-5 pl-20 gap-x-16">
+        <div className="text-5xl ">Lista zleceń </div>
         <Link to="/addOrder">
           <button className="p-5 font-semibold text-center bg-green-100 shadow-md w-52 col-span rounded-xl hover:bg-green-200">
             + Dodaj zlecenie
