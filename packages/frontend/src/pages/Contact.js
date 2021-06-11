@@ -11,9 +11,8 @@ export default function Contact() {
   return (
     <div className="max-w-4xl p-20 m-auto">
       {" "}
-      <div className="text-4xl">
-        Jesteśmy developerami których połączyła pasja do dronów i nowych
-        technologii
+      <div className="p-16 text-4xl font-bold text-center rounded-md shadow-xl bg-gradient-to-r from-red-200 to-indigo-500 login">
+        Połączyła nas pasja do nowych technologii oraz dronów
       </div>
       <div className="pt-16 pb-16 text-xl">
         Nasze dotychczasowe realizacje: Lorem ipsum dolor sit amet, consectetur
@@ -35,7 +34,7 @@ export default function Contact() {
       </div>
       <div className="block text-center">
         <Link to="/landingPage">
-          <button className="p-5 mb-5 font-semibold bg-gray-200 rounded-md w-72 login hover:bg-gray-400 hover:underline">
+          <button className="p-5 mb-5 font-semibold bg-gray-200 rounded-md shadow-md w-72 login hover:bg-gray-400 hover:underline">
             Powrót do strony głównej
           </button>
         </Link>
