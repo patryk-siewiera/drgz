@@ -6,7 +6,7 @@ import Login from "./pages/Login";
 import NoMatch from "./pages/NoMatch";
 import OrdersList from "./pages/OrdersList";
 import AddOrder from "./pages/AddOrder";
-import SuccessfullyAdded from "./pages/SuccessfullyAdded";
+import SuccessfullyAdded from "./pages/components/SuccessfullyAdded";
 import Contact from "./pages/Contact";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";

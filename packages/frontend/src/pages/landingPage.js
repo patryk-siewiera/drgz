@@ -17,7 +17,7 @@ function LandingPage() {
 				</div>
 				<div className="flex flex-col mb-5 sm:block sm:space-x-5">
 					<Link to="/ordersList">
-						<button className="p-3 mt-5 font-semibold rounded-md shadow-2xl bg-gradient-to-r from-red-300 to-red-500 w-60 ordersList hover:bg-gradient-to-r hover:from-yellow-400 hover:underline">
+						<button className="p-3 mt-5 font-semibold text-center rounded-md shadow-2xl bg-gradient-to-r from-red-300 to-red-500 w-60 ordersList hover:bg-gradient-to-r hover:from-yellow-400 hover:underline">
 							Lista Zleceń
 						</button>
 					</Link>

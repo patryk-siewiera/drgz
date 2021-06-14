@@ -24,18 +24,18 @@ function OrdersList() {
 	}, []);
 
 	return (
-		<div className="m-auto mw-w-md max-w-7xl">
-			<div className="pb-4 text-5xl pl-7 pr-7 pt-7 ">Lista zleceń </div>
-			<div className="pb-4 pl-7">
+		<div className="m-auto text-center mw-w-md max-w-7xl">
+			<div className="pb-4 text-5xl pt-7 ">Lista zleceń </div>
+			<div className="pb-2 ">
 				<Link to="/addOrder">
-					<button className="p-3 pl-5 font-semibold bg-green-100 shadow-md w-52 col-span rounded-xl hover:bg-green-200">
+					<button className="p-3 font-semibold bg-green-100 shadow-md w-52 col-span rounded-xl hover:bg-green-200">
 						+ Dodaj zlecenie
 					</button>
 				</Link>
 			</div>
 
 			<div>
-				<div className="grid grid-cols-1 p-6 lg:grid-cols-3">
+				<div className="grid grid-cols-1 lg:grid-cols-3">
 					{orders.map((order) => (
 						<CardOrder deleteCallback={refreshOrders} {...order} />
 					))}
@@ -43,7 +43,7 @@ function OrdersList() {
 			</div>
 			<div className="block text-center">
 				<Link to="/landingPage">
-					<button className="p-5 mb-5 font-semibold bg-gray-200 shadow-xl w-72 login rounded-xl hover:bg-gray-400 hover:underline">
+					<button className="p-3 mb-5 font-semibold bg-gray-200 shadow-xl w-72 login rounded-xl hover:bg-gray-400 hover:underline">
 						Powrót do strony głównej
 					</button>
 				</Link>

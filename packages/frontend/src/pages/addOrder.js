@@ -5,7 +5,7 @@ import CardOrder from "./components/CardOrders";
 import apiInstance from "../api";
 import LandingPage from "./LandingPage.js";
 import { useHistory } from "react-router-dom";
-import SuccessfullyAdded from "./SuccessfullyAdded";
+import SuccessfullyAdded from "./components/SuccessfullyAdded";
 
 import {
 	BrowserRouter as Router,
@@ -41,14 +41,14 @@ function AddOrder() {
 
 				<div className="pt-7">
 					<form
-						class="w-full max-w-lg"
+						className="w-full max-w-lg"
 						onSubmit={handleSubmit(onSubmit)}
 					>
 						<label>
 							Typ Zlecenia
 							<select
 								{...register("type", { required: true })}
-								class="block appearance-none w-full bg-gray-100 border border-gray-200 text-gray-700 py-3 px-4 pr-10 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+								className="block w-full px-4 py-3 pr-10 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
 								id="grid-state"
 							>
 								<option>Zdjęcia i filmy z drona</option>
@@ -61,12 +61,12 @@ function AddOrder() {
 						</label>
 						<label>
 							Województwo
-							<div class="relative">
+							<div className="relative">
 								<select
 									{...register("voivodeship", {
 										required: true,
 									})}
-									class="block appearance-none w-full bg-gray-100 border border-gray-200 text-gray-700 py-3 px-4 pr-10 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+									className="block w-full px-4 py-3 pr-10 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
 								>
 									<option>dolnośląskie</option>
 									<option>kujawsko-pomorskie</option>
@@ -91,7 +91,7 @@ function AddOrder() {
 							Miasto
 							<input
 								{...register("city", { required: true })}
-								class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+								className="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
 								type="text"
 								placeholder="Warszawa"
 							/>
@@ -102,7 +102,7 @@ function AddOrder() {
 							Ulica
 							<input
 								{...register("street", { required: true })}
-								class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+								className="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
 								type="text"
 								placeholder="Al. Jerozolimskie"
 							/>
@@ -112,7 +112,7 @@ function AddOrder() {
 							Opis
 							<input
 								{...register("description", { required: true })}
-								class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+								className="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
 								type="text"
 								placeholder="Opis zlecenia"
 							/>
@@ -121,7 +121,7 @@ function AddOrder() {
 							Cena (zł)
 							<input
 								{...register("cost", { required: true })}
-								class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+								className="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
 								id="grid-password"
 								type="number"
 								placeholder="1000"
@@ -135,8 +135,8 @@ function AddOrder() {
 							Do negocjacji
 						</label>
 
-						<div className="pt-10">
-							<button className="p-5 font-semibold text-center bg-green-100 w-60 rounded-xl hover:bg-green-200">
+						<div className="pt-3">
+							<button className="p-3 font-semibold text-center bg-green-100 w-60 rounded-xl hover:bg-green-200">
 								<input
 									type="submit"
 									value="Dodaj ogłoszenie +"
@@ -147,13 +147,11 @@ function AddOrder() {
 					</form>
 				</div>
 
-				<div className="pt-5">
-					<Link to="/ordersList">
-						<button className="p-5 font-semibold text-center bg-blue-100 rounded-xl hover:bg-blue-200">
-							Powrót
-						</button>
-					</Link>
-				</div>
+				<Link to="/ordersList">
+					<button className="p-3 font-semibold text-center bg-blue-100 rounded-xl hover:bg-blue-200">
+						Powrót
+					</button>
+				</Link>
 			</div>
 		</div>
 	);

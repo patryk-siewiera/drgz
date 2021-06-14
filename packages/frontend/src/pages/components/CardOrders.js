@@ -33,10 +33,9 @@ function descriptionParser(str, cutAtPoint) {
 
 function CardOrder({ deleteCallback = undefined, ...props }) {
 	return (
-		<div class="flex flex-col pl-5  pr-5 pb-2 space-y-5 rounded-xl  bg-white shadow-md md:m-5 m-2 hover:shadow-2xl border-2 transition hover:duration-100">
-			<div class="flex justify-center md:justify-end"></div>
+		<div className="flex flex-col pl-5 pr-5 m-2 space-y-5 text-center transition bg-white border-2 shadow-md rounded-xl md:m-5 hover:shadow-md hover:duration-100">
 			<div>
-				<h2 class="text-gray-800 text-lg font-semibold">
+				<h2 className="text-lg font-semibold text-gray-800">
 					{props.type}
 				</h2>
 				<div className="text-md">{props.voivodeship}</div>
@@ -44,27 +43,22 @@ function CardOrder({ deleteCallback = undefined, ...props }) {
 				<div className="mt-2">{props.city}</div>
 				<div>{props.street}</div>
 				<div>{descriptionParser(props.description, 5)}</div>
-			</div>
-			<div className="font-medium text-indigo-500 text-md">
-				{props.cost} zł{" "}
-				<div className="text-gray-500">
+				<div className="font-bold text-blue-700">
+					{props.cost} zł{" "}
 					{props.cost_negotiation === true ? "(negocjacja ceny)" : ""}
 				</div>
 			</div>
-			<div className="flex flex-col-2">
-				<div>
-					<button
-						onClick={() => deleteOrder(props.id, deleteCallback)}
-						href="#"
-						className="h-12 px-6 m-2 bg-red-300 rounded-lg w-30 focus:shadow-outline hover:bg-red-500"
-					>
-						Usuń
-					</button>
-				</div>
+			<div className="grid text-center grid-col-2">
+				<button
+					onClick={() => deleteOrder(props.id, deleteCallback)}
+					className="w-32 h-12 px-6 m-2 text-center bg-red-300 rounded-lg focus:shadow-outline hover:bg-red-500"
+				>
+					Usuń
+				</button>
 				<div>
 					<button
 						href="#"
-						className="h-12 px-6 m-2 bg-green-300 rounded-lg w-30 focus:shadow-outline hover:bg-green-500"
+						className="w-32 px-6 m-2 bg-green-300 rounded-lg h-14 focus:shadow-outline hover:bg-green-500"
 					>
 						Więcej detali
 					</button>
