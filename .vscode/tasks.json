@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "start",
+      "path": "packages/frontend/",
+      "problemMatcher": [],
+      "label": "frontend",
+      "detail": "react-scripts start"
+    },
+    {
+      "type": "npm",
+      "script": "dev",
+      "path": "packages/backend/",
+      "problemMatcher": [],
+      "label": "backend",
+      "detail": "nodemon ."
+    },
+    {
+      "label": "full-stack",
+      "problemMatcher": ["$tsc"],
+      "dependsOn": ["frontend", "backend"]
+    }
+  ]
+}
