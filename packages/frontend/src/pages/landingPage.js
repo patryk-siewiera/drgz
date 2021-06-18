@@ -22,7 +22,7 @@ function LandingPage() {
 						</button>
 					</Link>
 					<Link to="/Login">
-						<button className="p-3 mt-5 font-semibold bg-green-400 rounded-md shadow-md w-52 login hover:bg-green-500 hover:underline">
+						<button className="p-3 mt-5 font-semibold bg-green-300 rounded-md shadow-md w-52 login hover:bg-green-400 hover:underline">
 							Zaloguj
 						</button>
 					</Link>
@@ -57,7 +57,7 @@ function LandingPage() {
 			</div>
 			<div className="block text-center">
 				<Link to="/Contact">
-					<button className="p-3 text-base font-semibold bg-gray-200 rounded-md shadow-xl w-60 login hover:bg-gray-400 hover:underline">
+					<button className="p-3 text-base font-semibold bg-gray-100 rounded-md shadow-xl w-60 login hover:bg-gray-200 hover:underline">
 						Kontakt
 					</button>
 				</Link>

@@ -84,7 +84,7 @@ const Register = () => {
 					</div>
 
 					<div className="flex items-center justify-center object-center text-black gap-x-2">
-						<button className="p-5 font-semibold bg-yellow-300 rounded-md shadow-md w-72 login hover:bg-yellow-400 hover:underline">
+						<button className="p-3 font-semibold bg-yellow-300 rounded-md shadow-md w-72 login hover:bg-yellow-400 hover:underline">
 							Zarejestruj się
 						</button>
 					</div>
@@ -92,7 +92,7 @@ const Register = () => {
 			</div>
 			<div className="block object-center pt-20 text-center">
 				<Link to="/landingPage">
-					<button className="object-center p-5 mb-5 font-semibold bg-gray-200 rounded-md w-72 login hover:bg-gray-400 hover:underline">
+					<button className="object-center p-3 mb-5 font-semibold bg-gray-200 rounded-md w-72 login hover:bg-gray-400 hover:underline">
 						Powrót do strony głównej
 					</button>
 				</Link>

@@ -37,7 +37,7 @@ export default function Contact() {
 			</div>
 			<div className="block text-center">
 				<Link to="/landingPage">
-					<button className="p-3 mb-5 font-semibold bg-gray-200 rounded-md shadow-md w-60 login hover:bg-gray-400 hover:underline">
+					<button className="p-3 mb-5 font-semibold bg-gray-100 rounded-md shadow-md w-60 login hover:bg-gray-200 hover:underline">
 						Powrót do strony głównej
 					</button>
 				</Link>

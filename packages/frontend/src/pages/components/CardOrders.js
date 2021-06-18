@@ -31,7 +31,11 @@ function descriptionParser(str, cutAtPoint) {
 	}
 }
 
-function CardOrder({ deleteCallback = undefined, ...props }) {
+function CardOrder({
+	deleteCallback = undefined,
+	onDetailsClick = (orderData) => {},
+	...props
+}) {
 	return (
 		<div className="flex flex-col pl-5 pr-5 m-2 space-y-5 text-center transition bg-white border-2 shadow-md rounded-xl md:m-5 hover:shadow-md hover:duration-100">
 			<div>
@@ -49,15 +53,16 @@ function CardOrder({ deleteCallback = undefined, ...props }) {
 				</div>
 			</div>
 			<div className="grid text-center grid-col-2">
-				<button
+				{/* <button
 					onClick={() => deleteOrder(props.id, deleteCallback)}
 					className="w-32 h-12 px-6 m-2 text-center bg-red-300 rounded-lg focus:shadow-outline hover:bg-red-500"
 				>
 					Usuń
-				</button>
+				</button> */}
 				<div>
 					<button
 						href="#"
+						onClick={onDetailsClick}
 						className="w-32 px-6 m-2 bg-green-300 rounded-lg h-14 focus:shadow-outline hover:bg-green-500"
 					>
 						Więcej detali

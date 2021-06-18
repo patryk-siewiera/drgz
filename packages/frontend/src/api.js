@@ -27,6 +27,6 @@ function buildClient(basePath) {
 	};
 }
 
-export const apiInstance = buildClient("http://192.168.0.66:3001");
+export const apiInstance = buildClient("http://192.168.56.1:3001");
 
 export default apiInstance;
