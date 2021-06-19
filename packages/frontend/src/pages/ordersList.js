@@ -39,9 +39,9 @@ function OrdersList() {
 				<div className="grid grid-cols-1 lg:grid-cols-3">
 					{orders.map((order) => (
 						<CardOrder
-							onDetailsClick={(orderData) =>
-								setOrderDetailed(orderData)
-							}
+							onDetailsClick={(orderData) => {
+								setOrderDetailed(orderData);
+							}}
 							deleteCallback={refreshOrders}
 							{...order}
 						/>
@@ -51,8 +51,25 @@ function OrdersList() {
 
 			{orderDetailed && (
 				<div className="modal-details">
-					<div className="text-2xl">Szczegóły zlecenia</div>
-					<div>Nazwa: miejsce: {orderDetailed.id}</div>
+					<div className="mt-3 text-2xl">Szczegóły zlecenia</div>
+					<div className="mt-2 text-xl">
+						Miasto: <b>{orderDetailed.city}</b>
+					</div>
+					<div>
+						Ulica: <b>{orderDetailed.street}</b>
+					</div>
+					<div className="mt-5 ml-5 mr-5">
+						Opis: <b>{orderDetailed.description}</b>
+					</div>
+					<div className="mt-5">
+						Koszt: <b>{orderDetailed.cost}</b>
+					</div>
+					<div>
+						{orderDetailed.cost_negotiation === true
+							? "(do negocjacji)"
+							: ""}
+					</div>
+
 					<button
 						className="p-3 mt-5 mb-5 font-semibold bg-gray-300 shadow-xl w-72 login rounded-xl hover:bg-gray-400 hover:underline"
 						onClick={() => setOrderDetailed(undefined)}

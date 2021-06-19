@@ -43,7 +43,7 @@ function CardOrder({
 					{props.type}
 				</h2>
 				<div className="text-md">{props.voivodeship}</div>
-				<div className="mt-2">ID: {props.id}</div>
+				{/* <div className="mt-2">ID: {props.id}</div> */}
 				<div className="mt-2">{props.city}</div>
 				<div>{props.street}</div>
 				<div>{descriptionParser(props.description, 5)}</div>
@@ -62,7 +62,7 @@ function CardOrder({
 				<div>
 					<button
 						href="#"
-						onClick={onDetailsClick}
+						onClick={(ev) => onDetailsClick(props, ev)}
 						className="w-32 px-6 m-2 bg-green-300 rounded-lg h-14 focus:shadow-outline hover:bg-green-500"
 					>
 						Więcej detali
