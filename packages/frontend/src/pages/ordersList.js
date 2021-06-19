@@ -51,10 +51,12 @@ function OrdersList() {
 
 			{orderDetailed && (
 				<div className="modal-details">
-					<div className="tall">123123</div>
-					<h2>Szczegóły zlecenia {orderDetailed.id}</h2>
-					<div>Nazwa: miejsce:</div>
-					<button onClick={() => setOrderDetailed(undefined)}>
+					<div className="text-2xl">Szczegóły zlecenia</div>
+					<div>Nazwa: miejsce: {orderDetailed.id}</div>
+					<button
+						className="p-3 mt-5 mb-5 font-semibold bg-gray-300 shadow-xl w-72 login rounded-xl hover:bg-gray-400 hover:underline"
+						onClick={() => setOrderDetailed(undefined)}
+					>
 						Zamknij
 					</button>
 				</div>
