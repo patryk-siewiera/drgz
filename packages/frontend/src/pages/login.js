@@ -46,17 +46,21 @@ const Login = () => {
 							className={`w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4`}
 							id="email"
 							placeholder="E-mail (do konta drgz.pl)"
+							disabled
 						/>
 					</div>
 					<div className="pt-2 pb-12">
 						<label htmlFor="password">
-							<div className="pb-2 text-sm font-light">Hasło</div>
+							<div className="pb-2 text-sm font-light ">
+								Hasło
+							</div>
 						</label>
 						<input
 							type="password"
 							className={`w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4`}
 							id="password"
 							placeholder="Hasło"
+							disabled
 						/>
 					</div>
 

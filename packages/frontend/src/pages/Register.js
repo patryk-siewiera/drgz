@@ -46,6 +46,7 @@ const Register = () => {
 							className={`w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4`}
 							id="email"
 							placeholder="E-mail (do konta drgz.pl)"
+							disabled
 						/>
 					</div>
 					<div className="">
@@ -57,6 +58,7 @@ const Register = () => {
 							className={`w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4`}
 							id="password"
 							placeholder="Hasło"
+							disabled
 						/>
 					</div>
 					<div className="pt-2 pb-20">
@@ -70,6 +72,7 @@ const Register = () => {
 							className={`w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4`}
 							id="password"
 							placeholder="Powtórz hasło"
+							disabled
 						/>
 						<label className="self-center gap-4 text-sm">
 							<input type="checkbox" className="form-checkbox" />{" "}
