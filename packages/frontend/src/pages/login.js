@@ -19,7 +19,7 @@ const Login = () => {
 	return (
 		<div className="max-w-sm pt-20 m-auto">
 			<div className="text-4xl font-bold text-center text-red-500">
-				LOGOWANIE OD 30 CZERWCA
+				MOŻLIWOŚĆ REJESTRACJI OD 30 CZERWCA
 			</div>
 			<div className="flex items-center justify-center mt-6 text-2xl text-black gap-x-2">
 				{" "}
