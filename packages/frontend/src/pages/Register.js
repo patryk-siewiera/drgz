@@ -18,6 +18,9 @@ const Register = () => {
 	};
 	return (
 		<div className="max-w-sm pt-20 m-auto">
+			<div className="text-4xl font-bold text-center text-red-500">
+				LOGOWANIE OD 30 CZERWCA
+			</div>
 			<div className="flex items-center justify-center mt-6 text-2xl text-black gap-x-2">
 				{" "}
 				<Link to="/Login">
@@ -84,7 +87,7 @@ const Register = () => {
 					</div>
 
 					<div className="flex items-center justify-center object-center text-black gap-x-2">
-						<button className="p-3 font-semibold bg-yellow-300 rounded-md shadow-md w-72 login hover:bg-yellow-400 hover:underline">
+						<button className="p-3 font-semibold rounded-md shadow-md bg-yellow-50 w-72 login hover:bg-yellow-400 hover:underline">
 							Zarejestruj się
 						</button>
 					</div>

@@ -18,6 +18,9 @@ const Login = () => {
 	};
 	return (
 		<div className="max-w-sm pt-20 m-auto">
+			<div className="text-4xl font-bold text-center text-red-500">
+				LOGOWANIE OD 30 CZERWCA
+			</div>
 			<div className="flex items-center justify-center mt-6 text-2xl text-black gap-x-2">
 				{" "}
 				<div className="w-3/4 p-5 pt-10 pb-10 text-3xl font-bold text-center rounded-md shadow-xl bg-gradient-to-r to-blue-400 from-purple-400 login">
@@ -58,7 +61,7 @@ const Login = () => {
 					</div>
 
 					<div className="flex flex-col items-center justify-center p-20 text-black gap-y-5">
-						<button className="p-3 font-semibold bg-green-300 rounded-md shadow-md w-72 login hover:bg-green-400 hover:underline">
+						<button className="p-3 font-semibold rounded-md shadow-md bg-green-50 w-72 login hover:bg-green-400 hover:underline">
 							Zaloguj się
 						</button>
 						<Link to="/ForgotPassword">
