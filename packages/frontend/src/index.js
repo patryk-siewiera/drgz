@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+// import "./styles.css";
 import LandingPage from "./pages/LandingPage";
 import Login from "./pages/Login";
 import NoMatch from "./pages/NoMatch";
@@ -10,7 +11,7 @@ import SuccessfullyAdded from "./pages/components/SuccessfullyAdded";
 import Contact from "./pages/Contact";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
-import CreatedBy from "./pages/components/CreatedBy";
+import "tailwindcss/tailwind.css";
 
 import {
 	BrowserRouter as Router,
