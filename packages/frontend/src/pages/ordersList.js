@@ -51,31 +51,32 @@ function OrdersList() {
 
 			{orderDetailed && (
 				<div className="modal-details">
-					<div className="mt-3 text-2xl">Szczegóły zlecenia</div>
-					<div className="mt-2 text-xl">
-						Miasto: <b>{orderDetailed.city}</b>
-					</div>
-					<div>
-						Ulica: <b>{orderDetailed.street}</b>
-					</div>
-					<div className="mt-5 ml-5 mr-5">
-						Opis: <b>{orderDetailed.description}</b>
-					</div>
-					<div className="mt-5">
-						Koszt: <b>{orderDetailed.cost}</b>
-					</div>
-					<div>
-						{orderDetailed.cost_negotiation === true
-							? "(do negocjacji)"
-							: ""}
-					</div>
+					<div className="grid max-w-md gap-5 m-auto text-center grid-row-7">
+						<div className="mt-3 text-3xl text-gray-500">
+							Szczegóły zlecenia
+						</div>
+						<div className="mt-5 text-2xl">
+							{orderDetailed.city}
+						</div>
+						<div className="text-xl">{orderDetailed.street}</div>
+						<div className="ml-5 mr-5">
+							<i>{orderDetailed.description}</i>
+						</div>
+						<div className="text-xl font-bold text-blue-800">
+							{orderDetailed.cost} zł
+							<br />
+							{orderDetailed.cost_negotiation === true
+								? "(do negocjacji)"
+								: ""}
+						</div>
 
-					<button
-						className="p-3 mt-5 mb-5 font-semibold bg-gray-300 shadow-xl w-72 login rounded-xl hover:bg-gray-400 hover:underline"
-						onClick={() => setOrderDetailed(undefined)}
-					>
-						Zamknij
-					</button>
+						<button
+							className="p-3 m-auto mb-5 font-semibold text-center bg-gray-300 shadow-xl w-72 login rounded-xl hover:bg-gray-400 hover:underline"
+							onClick={() => setOrderDetailed(undefined)}
+						>
+							Zamknij
+						</button>
+					</div>
 				</div>
 			)}
 
