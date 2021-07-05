@@ -1,19 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { render } from "react-dom";
-import CardOrder from "./components/CardOrders";
+import { Link, useHistory } from "react-router-dom";
 import apiInstance from "../api";
-import LandingPage from "./LandingPage.js";
-import { useHistory } from "react-router-dom";
-import SuccessfullyAdded from "./components/SuccessfullyAdded";
-
-import {
-	BrowserRouter as Router,
-	Route,
-	Switch,
-	Link,
-	Redirect,
-} from "react-router-dom";
 
 function AddOrder() {
 	const {
@@ -49,7 +37,7 @@ function AddOrder() {
 							<select
 								{...register("type", { required: true })}
 								className="block w-full px-4 py-3 pr-10 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
-								id="grid-state"
+								id="type"
 							>
 								<option>Zdjęcia i filmy z drona</option>
 								<option>Inspekcje z drona</option>
@@ -63,6 +51,7 @@ function AddOrder() {
 							Województwo
 							<div className="relative">
 								<select
+									id="voivodeship"
 									{...register("voivodeship", {
 										required: true,
 									})}
@@ -93,6 +82,7 @@ function AddOrder() {
 								{...register("city", { required: true })}
 								className="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
 								type="text"
+								id="city"
 								placeholder="Warszawa"
 							/>
 						</label>
@@ -104,6 +94,7 @@ function AddOrder() {
 								{...register("street", { required: true })}
 								className="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
 								type="text"
+								id="street"
 								placeholder="Al. Jerozolimskie"
 							/>
 						</label>
@@ -114,18 +105,29 @@ function AddOrder() {
 								{...register("description", { required: true })}
 								className="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
 								type="text"
+								id="description"
 								placeholder="Opis zlecenia"
 							/>
 						</label>
 						<label>
 							Cena (zł)
 							<input
-								{...register("cost", { required: true })}
+								{...register("cost", {
+									required: true,
+									min: 0,
+									max: 1000000,
+								})}
 								className="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
-								id="grid-password"
+								id="cost"
+								aria-invalid={errors.cost ? "true" : "false"}
 								type="number"
 								placeholder="1000"
 							/>
+							{errors.cost && (
+								<div className="font-bold text-red-500 underline">
+									Cena nie może być ujemna
+								</div>
+							)}
 						</label>
 						<label>
 							<input
