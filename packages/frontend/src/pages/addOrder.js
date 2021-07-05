@@ -79,7 +79,10 @@ function AddOrder() {
 						<label className="py-30">
 							Miasto
 							<input
-								{...register("city", { required: true })}
+								{...register("city", {
+									required: true,
+									maxLength: 50,
+								})}
 								className="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
 								type="text"
 								id="city"
@@ -91,7 +94,10 @@ function AddOrder() {
 							{" "}
 							Ulica
 							<input
-								{...register("street", { required: true })}
+								{...register("street", {
+									required: true,
+									maxLength: 50,
+								})}
 								className="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-100 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
 								type="text"
 								id="street"
@@ -131,14 +137,24 @@ function AddOrder() {
 							/>
 						</label>
 						<div className="errors">
-							{errors.cost && (
+							{errors.city && (
 								<div className="mt-5 mb-5 font-bold text-red-500 underline">
-									Cena nie może być ujemna
+									Miasto: powinno mieć od 1 do 50 znaków
+								</div>
+							)}
+							{errors.street && (
+								<div className="mt-5 mb-5 font-bold text-red-500 underline">
+									Ulica: powinna mieć od 1 do 50 znaków
 								</div>
 							)}
 							{errors.description && (
 								<div className="mt-5 mb-5 font-bold text-red-500 underline">
-									Opis jest większy niż 200 znaków
+									Opis: powinien mieć mniej niż 200 znaków
+								</div>
+							)}
+							{errors.cost && (
+								<div className="mt-5 mb-5 font-bold text-red-500 underline">
+									Cena: nie może być ujemna
 								</div>
 							)}
 						</div>
