@@ -25,6 +25,12 @@ function OrdersList() {
 
 	const [orderDetailed, setOrderDetailed] = useState(undefined);
 
+	const paginationSlice = (startSlice, endSlice, object) => {
+		return object.slice(startSlice, endSlice);
+	};
+
+	const [page, setPage] = useState(0);
+
 	return (
 		<div className="m-auto text-center mw-w-md max-w-7xl">
 			<div className="pb-4 text-5xl pt-7 ">Lista zleceń </div>
@@ -37,7 +43,7 @@ function OrdersList() {
 			</div>
 			<div>
 				<div className="grid grid-cols-1 lg:grid-cols-3">
-					{orders.map((order) => (
+					{orders.slice(0, 9).map((order) => (
 						<CardOrder
 							onDetailsClick={(orderData) => {
 								setOrderDetailed(orderData);
@@ -80,11 +86,18 @@ function OrdersList() {
 				</div>
 			)}
 			<div className="gap-5 next-prev">
-				<button className="p-3 mb-5 mr-2 font-semibold bg-yellow-200 shadow-xl w-60 login rounded-xl hover:bg-yellow-400 hover:underline">
-					Następna
-				</button>
-				<button className="p-3 mb-5 ml-2 font-semibold bg-yellow-200 shadow-xl w-60 login rounded-xl hover:bg-yellow-400 hover:underline">
+				<button
+					className="p-3 mb-5 ml-2 font-semibold bg-yellow-200 shadow-xl w-60 login rounded-xl hover:bg-yellow-400 hover:underline"
+					onClick={() => setPage(page - 1)}
+				>
 					Poprzednia
+				</button>
+				<div className="inline ml-5 mr-5 text-2xl">{page}</div>
+				<button
+					className="p-3 mb-5 mr-2 font-semibold bg-yellow-200 shadow-xl w-60 login rounded-xl hover:bg-yellow-400 hover:underline"
+					onClick={() => setPage(page + 1)}
+				>
+					Następna
 				</button>
 			</div>
 
