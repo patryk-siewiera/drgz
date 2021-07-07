@@ -136,20 +136,30 @@ function AddOrder() {
 								placeholder="1000"
 							/>
 						</label>
+						<label>
+							<input
+								type="checkbox"
+								{...register("cost_negotiation")}
+							/>
+							Do negocjacji
+						</label>
 						<div className="errors">
 							{errors.city && (
 								<div className="mt-5 mb-5 font-bold text-red-500 underline">
-									Miasto: powinno mieć od 1 do 50 znaków
+									Miasto: powinno mieć od 1 do 50 znaków (pole
+									wymagane)
 								</div>
 							)}
 							{errors.street && (
 								<div className="mt-5 mb-5 font-bold text-red-500 underline">
-									Ulica: powinna mieć od 1 do 50 znaków
+									Ulica: powinna mieć od 1 do 50 znaków (pole
+									wymagane)
 								</div>
 							)}
 							{errors.description && (
 								<div className="mt-5 mb-5 font-bold text-red-500 underline">
-									Opis: powinien mieć mniej niż 200 znaków
+									Opis: powinien mieć od 1 do 200 znaków (pole
+									wymagane)
 								</div>
 							)}
 							{errors.cost && (
@@ -158,13 +168,6 @@ function AddOrder() {
 								</div>
 							)}
 						</div>
-						<label>
-							<input
-								type="checkbox"
-								{...register("cost_negotiation")}
-							/>
-							Do negocjacji
-						</label>
 
 						<div className="pt-3">
 							<button className="p-3 font-semibold text-center bg-green-100 w-60 rounded-xl hover:bg-green-200">

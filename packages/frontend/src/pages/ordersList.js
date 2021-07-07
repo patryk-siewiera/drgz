@@ -79,6 +79,14 @@ function OrdersList() {
 					</div>
 				</div>
 			)}
+			<div className="gap-5 next-prev">
+				<button className="p-3 mb-5 mr-2 font-semibold bg-yellow-200 shadow-xl w-60 login rounded-xl hover:bg-yellow-400 hover:underline">
+					Następna
+				</button>
+				<button className="p-3 mb-5 ml-2 font-semibold bg-yellow-200 shadow-xl w-60 login rounded-xl hover:bg-yellow-400 hover:underline">
+					Poprzednia
+				</button>
+			</div>
 
 			<div className="block text-center">
 				<Link to="/landingPage">
